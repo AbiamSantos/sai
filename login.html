@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---FONT AWESON-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!--FONT OSWALD-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
+    <!--CUSTON CSS-->
+    <link rel="stylesheet" href="stylesLogin.css">
+    <title>Login</title>
+</head>
+<body>
+    <!--Registro-->
+    <div class="container-form sign-up">
+        <div class="welcome-back">
+            <div class="message">
+                <h2>Bienvenido</h2>
+                <p>Si ya tiene cuenta por fovar inicie sesion aquí</p>
+                <button class="sign-up-btn">Iniciar Sesión</button>
+            </div>
+        </div>
+        <!--Enviar Datos-->
+        <form action="php/insertarusuarios.php" method="post" class="formulario">
+            <h2 class="create-account">Crear una cuenta</h2>
+            <section class="social">
+                <div class="links">
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </section>
+            <p class="cuenta-gratis">Crear cuenta gratis</p>
+            <input type="text" name="nombre" placeholder="Nombre Completo">
+            <input type="email" name="correo" placeholder="Email">
+            <p></p>
+            <input type="password" name="contrasenia" placeholder="Contraseña">
+            <p></p>
+            <input type="submit" name="enviar" value="Registrarse">
+        </form>
+    </div>
+    <!--Iniciar Sesion-->
+    <div class="container-form sign-in">
+        <form action="php/validarusuarios.php" method="post" class="formulario">
+            <h2 class="create-account">Iniciar Sesion</h2>
+            <section class="social">
+                <div class="links">
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </section>
+            <p class="cuenta-gratis">¿Aun no tienes cuenta?</p>
+            <input type="email" name="correo" placeholder="Email">
+            <p></p>
+            <input type="password" name="contrasenia" placeholder="Contraseña">
+            <p></p>
+            <input type="submit" value="Iniciar Sesion">
+        </form>
+        <div class="welcome-back">
+            <div class="message">
+                <h2>Bienvenido</h2>
+                <p>Si aun no tienes una cuenta por favor registrse aquí</p>
+                <button class="sign-in-btn">Registrarse</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/script.js"></script>
+    <!--<script src="js/form.js"></script>-->
+   
+</body>
+</html>
